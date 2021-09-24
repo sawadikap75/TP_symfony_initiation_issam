@@ -1,53 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+{% extends "base.html.twig" %}
 
-    <title>Document</title>
-</head>
-<header>
+        {% block body %}
+        <div class="container justify-content-center  m-15 ">
 
-         <div class="nav justify-content-center">
-            <a href="rules" class="nav-link active">Règlement Intérieur</a>
-            <a href="home" class="nav-link active">Home</a>
+            <h1 class="text-center text-primary my-4">
+            </h1>
+
+                {% for i in 1..10 %}
+            <h2 class="text-primary">
+                {{ i }}
+                . Lorem ipsum dolor sit amet.
+            </h2>
+            <p>
+                <span>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates corporis debitis aperiam, amet aliquid dignissimos molestias officia, dicta maiores dolorem, architecto omnis dolores quod tenetur quia? Ipsam tempore sapiente qui.
+                    
+                </span>
+                <span>
+                    Debitis, nulla. Adipisci, incidunt. Quam commodi blanditiis ipsum molestiae error cum odio corporis deleniti repellat ullam. Eum earum praesentium voluptatem dolor, quae modi sint quidem cumque ut, libero saepe tempore?
+                    
+                </span>
+                <span>
+                    Quos magnam possimus at! Vero eos explicabo aut aliquam nisi suscipit expedita mollitia necessitatibus architecto fugit, tempore quasi eligendi nostrum, cum animi rem assumenda molestiae? In vero sapiente perspiciatis tempora.
+                    
+                </span>
+            </p>
+            {% endfor %}
         </div>
-</header>
-
-<div class="container justify-content-center  m-15 ">
-    <h1 class="text-center text-primary my-4">
-        Règlement Intérieur
-    </h1>
-
-    {% for i in 1..10 %}
-    <h2 class="text-primary">
-        {{ i }}
-        . Lorem ipsum dolor sit amet.
-    </h2>
-    <p>
-        <span>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates corporis debitis aperiam, amet aliquid dignissimos molestias officia, dicta maiores dolorem, architecto omnis dolores quod tenetur quia? Ipsam tempore sapiente qui.
-            
-        </span>
-        <span>
-            Debitis, nulla. Adipisci, incidunt. Quam commodi blanditiis ipsum molestiae error cum odio corporis deleniti repellat ullam. Eum earum praesentium voluptatem dolor, quae modi sint quidem cumque ut, libero saepe tempore?
-            
-        </span>
-        <span>
-            Quos magnam possimus at! Vero eos explicabo aut aliquam nisi suscipit expedita mollitia necessitatibus architecto fugit, tempore quasi eligendi nostrum, cum animi rem assumenda molestiae? In vero sapiente perspiciatis tempora.
-            
-        </span>
-    </p>
-    {% endfor %}
-</div>
-
-
-<footer>
-<p class="text-center text-primary">Réalisé en 2021</p>
-</footer>
-</body>
-</html>
+        {% endblock %}
 
 

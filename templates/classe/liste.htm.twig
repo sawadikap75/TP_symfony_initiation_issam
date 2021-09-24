@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ClasseController!{% endblock %}
+
+{% block body %}
+
+<div class="example-wrapper">
+        {% for classe in classes}
+<div class="card text-left">
+    <div class="card-body">
+            <h4 class="card-title">{{classe.nom}} </h4>
+            <h4 class="card-text">{{classe.niveau}}</h4>
+            <h4 class="card-text">{{classe.profPrincipal.prenom}} stroupper({{classe.profPrincipal.nom}})</h4>
+    </div>
+    <a class="btn btn-danger" href="#" title="Supprimer" onclick="return confirm('Êtes-vous sûr ?')">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </a>
+    {% endfor %}
+</div>
+    {% endblock %}

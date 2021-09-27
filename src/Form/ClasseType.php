@@ -3,11 +3,13 @@
 namespace App\Form;
 
 use App\Entity\Classe;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\IntegerType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 
 class ClasseType extends AbstractType
 {
@@ -16,8 +18,14 @@ class ClasseType extends AbstractType
         $builder
             ->add('nom',TextType::class)
             ->add('niveau',IntegerType::class)
-            ->add('profPrincipal',TextType::class)
-        ;
+            ->add('profPrincipal',EntityType::class,[
+                'class'=>Classe::class,
+                'choice_label'=>'nom'
+            ])
+            ->add('submit',SubmitType::class,[
+                'label'=>'Envoyer'
+            ]);
+
     }
 
     public function configureOptions(OptionsResolver $resolver)

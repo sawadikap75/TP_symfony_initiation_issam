@@ -8,7 +8,7 @@
 
 		{% for prof in profs %}
             <div class="card row  col-12 my-2 ">
-                <div class="card-body col-10 text-primary">
+                <div class="card-body bg-light col-10 text-primary">
                     <h4 class="card-title col-8">Identité du professeur : {{prof.prenom}}  {{prof.nom}}</h4>
                     <h5 class="card-text col-8">Date de naissance: {{ prof.dateDeNaissance.format('d/m/Y')}}</h5>
                     <h5 class="card-text col-8">Matière enseignée : {{prof.matiere.nom}}</h5><br>

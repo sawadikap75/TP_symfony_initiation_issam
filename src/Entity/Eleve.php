@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Entity;
-
+use DateTimeInterface;
+use Symfony\Component\Form\Extension\Core\Type\DateIntervalType;
 use App\Repository\EleveRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -82,6 +83,7 @@ class Eleve
     public function getDateDeNaissance(): ?\DateTimeInterface
     {
         return $this->dateDeNaissance;
+
     }
 
     public function setDateDeNaissance(\DateTimeInterface $dateDeNaissance): self

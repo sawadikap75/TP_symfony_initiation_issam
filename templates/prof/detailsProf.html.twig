@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Votre professeur{% endblock %}
+
+{% block h1 %}Votre professeur{% endblock %}
+
+{% block body %}
+
+            <div class="card row  col-12 my-4 ">
+                <div class="card-body col-10 text-primary">
+                    <h4 class="card-title col-8" type>Identité du professeur : {{prof.prenom}}  {{prof.nom}}</h4>
+                    <h5 class="card-text col-8">Date de naissance: {{ prof.dateDeNaissance.format('d/m/Y')}}</h5>
+                    <h5 class="card-text col-8">Matière enseignée : {{prof.matiere.nom}}</h5><br>
+                    <h5 class="card-text col-8">Professeur principal de la classe : {{prof.id}}</h5><br>
+
+                    <p class="px-3">Duis non venenatis velit. Ut tincidunt nibh euismod justo laoreet gravida. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus mattis et lacus in rutrum. Nam dictum et dolor sed lobortis. Integer in augue orci. Duis aliquet est luctus est dignissim tempus.</P>
+
+
+                </div>
+
+            </div>
+
+
+
+{% endblock %}

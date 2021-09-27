@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Détails de votre classe{% endblock %}
+
+{% block h1 %}Détails de votre classe{% endblock %}
+
+{% block body %}
+            <div class="card row justify-content-center  col-10  m-5 ">
+                <div class="card-body  col-10 text-primary">
+                    <h4 class="card-title col-8">Nom de la classe : {{classe.nom}} </h4>
+                    <h5 class="card-text col-8">Niveau de la Classe : {{classe.niveau}}</h5>
+                    <h5 class="card-text col-8">Professeur principal  : {{classe.profPrincipal.prenom}} {{classe.profPrincipal.nom}}</h5><br>
+
+                    <p class="card-text-left px-3">Nulla libero enim, congue at eleifend et, malesuada ut elit. Sed elementum laoreet tempor. Nullam sodales laoreet nisl vitae sagittis. Aliquam quis consectetur risus. Nullam molestie ut sem quis faucibus. Integer ac posuere diam. Proin interdum lacinia arcu. Aliquam faucibus mauris ac dolor elementum, et vehicula enim sodales. Phasellus finibus mauris eu ante laoreet tristique. Vestibulum dapibus rutrum metus, in hendrerit orci bibendum a. Etiam luctus ipsum in augue accumsan pharetra. Proin porta ullamcorper suscipit. Nullam eleifend mi diam, at tincidunt sapien congue in. Sed accumsan nisl a velit egestas, vehicula pharetra dolor dictum.</p>
+
+                </div>
+            </div>
+
+{% endblock %}
+
+
+

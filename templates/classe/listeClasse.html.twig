@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Nos Classes{% endblock %}
+
+{% block h1 %}Nos Classes {% endblock %}
+
+{% block body %}
+
+		{% for classe in classes %}
+				<div class="card row  col-12 my-2 ">
+					<div class="card-body col-10 text-primary">
+						<h4 class="card-title col-8">Nom de la classe : {{classe.nom}}</h4>
+						<h5 class="card-text col-8">Niveau de la classe : {{classe.niveau}}</h5>
+						<h5 class="card-text col-8">Professeur principal : {{classe.profPrincipal.nom}}</h5>
+						<h5 class="card-text col-8"><a type="button" class="btn btn-info" href={{path('one_classe',{id: classe.id})}} >Notre Classe</a></h5>
+					</div>
+				</div>
+		{% endfor %}
+
+{% endblock %}
+

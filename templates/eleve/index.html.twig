@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos Eléves{% endblock %}
+
+{% block h1 %}Nos Eléves {% endblock %}
+
+{% block body %}
+
+		{% for eleve in eleves %}
+            <div class="card row  col-12 my-2 ">
+                <div class="card-body col-10 text-primary">
+                    <h4 class="card-title col-8">Identité de l'éleve : {{eleve.prenom}}  {{eleve.nom}}</h4>
+                    <h5 class="card-text col-8">Classe : {{eleve.classe.nom}}</h5>
+                    <h5 class="card-text col-8">Date de naissance: {{ eleve.dateDeNaissance.format('d/m/Y')}}</h5>
+                    <h5 class="card-text col-8"><a type="button" class="btn btn-info" href={{path('one_eleve',{id: eleve.id})}} >Notre éleve</a></h5>
+
+                </div>
+
+            </div>
+
+
+		{% endfor %}
+
+
+{% endblock %}

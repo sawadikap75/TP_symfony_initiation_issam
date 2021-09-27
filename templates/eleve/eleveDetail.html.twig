@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre Eléve{% endblock %}
+
+{% block h1 %}Notre Eléve {% endblock %}
+
+{% block body %}
+
+        
+            <div class="card row  col-12 my-2 ">
+                <div class="card-body col-10 text-primary">
+                    <h4 class="card-title col-8">Identité de l'éleve : {{eleve.prenom}}  {{eleve.nom}}</h4>
+                    <h5 class="card-text col-8">Classe : {{eleve.classe.nom}}</h5>
+                    <h5 class="card-text col-8">Date de naissance: {{ eleve.dateDeNaissance.format('d/m/Y')}}</h5><br>
+                    <h5 class="card-text col-8">Professeur principal : {{eleve.classe.profPrincipal.prenom}} {{eleve.classe.profPrincipal.nom}}</h5>
+
+                    <p>Nulla libero enim, congue at eleifend et, malesuada ut elit. Sed elementum laoreet tempor. Nullam sodales laoreet nisl vitae sagittis. Aliquam quis consectetur risus. Nullam molestie ut sem quis faucibus. Integer ac posuere diam. Proin interdum lacinia arcu. Aliquam faucibus mauris ac dolor elementum, et vehicula enim sodales. Phasellus finibus mauris eu ante laoreet tristique. Vestibulum dapibus rutrum metus, in hendrerit orci bibendum a. Etiam luctus ipsum in augue accumsan pharetra. Proin porta ullamcorper suscipit. Nullam eleifend mi diam, at tincidunt sapien congue in. Sed accumsan nisl a velit egestas, vehicula pharetra dolor dictum.</p>
+
+                </div>
+            </div>
+
+
+
+{% endblock %}

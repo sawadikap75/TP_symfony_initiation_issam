@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre matière | {{ parent() }} {% endblock %}
+
+{% block h1 %}Notre matière  {% endblock %}
+
+{% block body %}
+
+				<div class="card row  col-12 my-2 ">
+					<div class="card-body col-10 text-primary">
+						<h4 class="card-title col-8">Nom de la matière : {{matiere.nom}}</h4>
+						<h5 class="card-text col-8">Niveau de la classe : {{matiere.id}}</h5><br>
+						<p>Ut volutpat augue nec dolor mattis tincidunt. Fusce non ligula non dui tempus tincidunt nec vitae nisi. Donec quis malesuada arcu. Nam ultrices felis quis lobortis varius. Aliquam sit amet porttitor nisi. Cras eleifend nulla ex. Integer aliquam gravida dolor.</P>
+					</div>
+				</div>
+
+{% endblock %}

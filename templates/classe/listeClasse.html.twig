@@ -14,6 +14,9 @@
 						<h5 class="card-text col-8">Niveau de la classe : {{classe.niveau}}</h5>
 						<h5 class="card-text col-8">Professeur principal : {{classe.profPrincipal.nom}}</h5>
 						<h5 class="card-text col-8"><a type="button" class="btn btn-info" href={{path('one_classe',{id: classe.id})}} >Notre Classe</a></h5>
+						<h5 class="card-text col-8"><a type="button" class="btn btn-danger" href={{path('delete_classe',{id: classe.id})}} >Supprimer classe</a></h5>
+						<a href={{path('create_classe',{id: classe.id})}} >Ajouter classe</a>
+
 					</div>
 				</div>
 		{% endfor %}

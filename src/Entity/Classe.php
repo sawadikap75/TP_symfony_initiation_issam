@@ -35,7 +35,7 @@ class Classe
     private $profPrincipal;
 
     /**
-     * @ORM\OneToMany(targetEntity=Eleve::class, mappedBy="classe")
+     * @ORM\OneToMany(targetEntity=Eleve::class, mappedBy="classe",orphanRemoval=true)
      */
     private $eleves;
 

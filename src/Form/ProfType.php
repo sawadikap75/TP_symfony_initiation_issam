@@ -18,13 +18,13 @@ class ProfType extends AbstractType
             ->add('nom',TextType::class)
             ->add('prenom',TextType::class)
             ->add('dateDeNaissance',DateType::class,[
-                'wiget'=>'signle_text',
+                'widget'=>'signle_text',
                 'format'=>'yyyy-MM-dd'
             ])
 
             ->add('matiere',EntityType::class,[
                 'class'=>Matiere::class,
-                'choice_label'=>'nom'
+                'choice_label'=> 'nom'
 
             ])
             ->add('submit', SubmitType::class,[

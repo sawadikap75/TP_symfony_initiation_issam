@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos matières | {{ parent() }} {% endblock %}
+
+{% block h1 %}Nos matières  {% endblock %}
+
+{% block body %}
+
+		{% for matiere in matieres %}
+				<div class="card row  col-12 my-2 ">
+					<div class="card-body col-10 text-primary">
+						<h4 class="card-title col-8">Nom de la matière : {{matiere.nom}}</h4>
+						<h5 class="card-text col-8">Id de la classe : {{matiere.id}}</h5>
+						<h5 class="card-text col-8"><a type="button" class="btn btn-info" href={{path('one_matiere',{id: matiere.id})}} >Notre matiere</a></h5>
+                        <h5 class="card-text col-8"><a type="button" class="btn btn-danger" href={{path('delete_matiere',{id: matiere.id})}} >Supprimer matière</a></h5>
+
+					</div>
+				</div>
+		{% endfor %}
+
+{% endblock %}
